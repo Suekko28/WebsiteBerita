@@ -1,0 +1,517 @@
+*{
+    margin : 0;
+    padding : 0;
+    
+}
+
+
+
+html,body 
+{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+
+
+/*Jumbotron*/
+
+.jumbotron{
+    background-size: cover;
+    height: 640px;
+    position: relative;
+}
+
+.jumbotron .container {
+    position:relative;
+    z-index: 1;
+
+}
+
+.jumbotron::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+
+}
+
+.jumbotron .display-4{
+    color:white;
+    font-style: bold;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+   
+}
+
+/* News */
+.col {
+    margin-top: 100px;
+    padding-bottom: 30px;
+    z-index: 1;
+    
+}
+
+.gb-konten {
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 50px;
+    height: 250px;
+    width: 350px;
+}
+
+.gb-konten:hover{
+    
+}
+
+.gb-ctr{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.paragraf{
+
+    padding-bottom: 50px;
+    padding-top: 20px;
+    
+}
+
+.kategori{
+
+    padding-top: 25px;
+    text-align: right;
+}
+
+.row{
+     
+    padding-top: 10px;
+   
+}
+
+
+.news-link{
+    color: #000;
+    font-size: 25;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 100px;
+    
+}
+
+.judul{
+
+    color: #000;
+    font-size: 25;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.btn-lain{
+    margin-top: 50px;
+}
+
+.pagination{
+    margin-left: 45%;
+    margin-right: 45%;
+    width: 50%;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+/* Dekstop Version */
+
+@media (min-width:992px){
+    
+
+/* navbar */
+
+#nav{
+    position : sticky;
+    top : 0;
+    z-index : 992;
+}
+
+.navbar{
+    background-image: linear-gradient(to right,#5a5a5a,#2b2b2b);
+
+}
+
+.navbar-brand span{
+    font-weight: bolder;
+    margin: -10px;
+    color: #fff;
+    
+}
+
+.navbar-nav li{
+    padding : 0 10px;
+    margin-left: 10px;
+}
+
+.nav-link:hover::after{
+    border-bottom : 3px solid red;
+    content: '';
+    display: block;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px ;
+}
+
+.navbar-nav li a{
+    color : #fff !important;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.dropdown, .btn{
+
+    color:#ffff;
+    background-color: #383838;
+    border-radius: 10px;
+    margin-left: 10px;
+    text-align: center;
+
+   
+}
+
+/* Search */
+
+
+.srch{
+    padding-top: 50px;
+    
+    
+    
+}
+
+/*jumbotron*/
+
+.title {
+    color: #ffff;
+    font-style: bold;
+}
+.jumbotron{
+    margin-top: -5px;
+    
+}
+
+.jumbotron .display-4{
+    
+    font-size: 60px;
+}
+
+/* Banner */
+.banner-enter{
+    position: relative;
+    background-image: linear-gradient(to right, #2b2b2b, #5a5a5a);
+    background-image: url('../storage/img/enter-page.jpeg');
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    height: 40vh;
+    color : #ffff;
+    padding-top: 5%;
+    padding-bottom: 20px;
+    font-weight: bold;
+
+}
+
+.banner-enter::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+}
+
+
+.banner-politic{
+    position: relative;
+    background-image: linear-gradient(to right, #2b2b2b, #5a5a5a);
+    background-image: url('../storage/img/politic.jpg');
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    height: 40vh;
+    color : #ffff;
+    padding-top: 5%;
+    padding-bottom: 20px;
+    font-weight: bold;
+
+}
+
+.banner-politic::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+}
+
+.banner-sport{
+    position: relative;
+    background-image: linear-gradient(to right, #2b2b2b, #5a5a5a);
+    background-image: url('../storage/img/sport.jpg');
+    background-size: cover;
+    max-width: 100%;
+    height: 40vh;
+    color : #ffff;
+    padding-top: 5%;
+    padding-bottom: 20px;
+    font-weight: bold;
+
+}
+
+.banner-sport::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+}
+
+.banner-travel{
+    position: relative;
+    background-image: linear-gradient(to right, #2b2b2b, #5a5a5a);
+    background-image: url('../storage/img/travel.jpeg');
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    height: 40vh;
+    color : #ffff;
+    padding-top: 5%;
+    padding-bottom: 20px;
+    font-weight: bold;
+
+}
+
+.banner-travel::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+}
+
+.banner-style{
+    position: relative;
+    background-image: linear-gradient(to right, #2b2b2b, #5a5a5a);
+    background-image: url('../storage/img/style.png');
+    background-size: cover;
+    max-width: 100%;
+    height: 40vh;
+    color : #ffff;
+    padding-top: 5%;
+    padding-bottom: 20px;
+    font-weight: bold;
+
+}
+
+.banner-style::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+}
+
+.banner-hot{
+    position: relative;
+    background-image: linear-gradient(to right, #2b2b2b, #5a5a5a);
+    background-image: url('../storage/img/hot.jpg');
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    height: 40vh;
+    color : #ffff;
+    padding-top: 5%;
+    padding-bottom: 20px;
+    font-weight: bold;
+
+}
+
+.banner-hot::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+
+.title-ent{
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-left: -100px;
+
+}
+
+.title-pltc{
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-left: -40px;
+
+}
+
+.title-sprt{
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-left: -40px;
+
+}
+
+.title-trvl{
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-left: -40px;
+
+}
+
+.title-sty{
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-left: -30px;
+
+}
+
+.title-hot{
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-left: -60px;
+}
+
+.ban-img{
+    position: relative;
+    z-index: 1000;
+
+}
+
+/* Wave */
+.wave{
+    position: absolute;
+    bottom: -5%;
+    left: 0;
+    right: 3;
+}
+
+/* Latest */
+
+.card{
+
+    box-shadow: 0px 10px 10px -20px rgba(0, 0, 0, 0.75);
+    transition: .3s;
+    margin: 50px auto;
+
+}
+
+.card:hover{
+    box-shadow: 0px 30px 10px -40px rgba(0, 0, 0, 0.15);
+    margin-top: 40px;
+
+}
+.card-title{
+    color: #000;
+    font-size: 25;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 100px;
+   
+}
+
+
+
+
+
+
+/* Contact */
+
+#contact {
+    padding: 200px 0px;
+    
+    margin-left: -50px;
+
+
+}
+
+.contact{
+    margin-top: 5%;
+
+}
+
+.contact .btn{
+    border-radius: 20px;
+   
+
+}
+
+.fdbck{
+    margin-top: -200px;
+}
+
+.enter{
+    box-shadow: 0px 10px 10px -20px rgba(0, 0, 0, 0.75);
+    transition: .3s;
+    margin: 50px auto;
+}
+
+.enter:hover{
+    box-shadow: 0px 30px 10px -40px rgba(0, 0, 0, 0.15);
+    margin-top: 40px;
+
+}
+
+
+
+
+
+/* Footer */
+
+.pagination{
+    
+}
+
+#footer{
+    margin-top: 3%;
+    padding: 20px 0;
+    background-image: linear-gradient(to right,#5a5a5a,#2b2b2b);
+    color: #ffff;
+
+}
+
+
+}

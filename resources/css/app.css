@@ -1,0 +1,362 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --darkbg:#251D29;
+    --darkt: #FFD1F7;
+    --lightbg: #fff;
+    --lightt: #D43370;
+    
+    --toggleHeight: 16em;
+    --toggleWidth: 30em;
+    --toggleBtnRadius: 10em;
+  
+    --bgColor--night: #423966;
+    --toggleBtn-bgColor--night: var(--bgColor--night);
+    --mooncolor: #D9FBFF;
+    --bgColor--day: #9ee3fb;
+    --toggleBtn-bgColor--day: var(--bgColor--day);
+  }
+  
+  body{
+    transition: all .2s ease-in-out;
+    background: var(--darkbg);
+    color: var(--darkt);
+    text-align: center;
+  }
+  .light{
+    background: var(--lightbg);
+    color: var(--lightt);
+  }
+  .tdnn {
+    margin: 0 auto;
+    /*change size of toggle with font-size*/
+    font-size: 30%;
+    margin-top: 10em;
+     position: relative;
+      height: var(--toggleHeight);
+      width: var(--toggleWidth);
+      border-radius: var(--toggleHeight);
+    transition: all 500ms ease-in-out;
+    background: var(--bgColor--night);
+  }
+  .day{
+    background: #FFBF71;
+  }
+  .moon {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    transition: all 400ms ease-in-out;
+    
+    top: 3em;
+    left: 3em;
+    transform: rotate(-75deg);
+    width: var(--toggleBtnRadius);
+    height: var(--toggleBtnRadius);
+    background: var(--bgColor--night);
+    box-shadow: 
+      3em 2.5em 0 0em var(--mooncolor) inset,
+      rgba(255, 255, 255, 0.1) 0em -7em 0 -4.5em,
+      rgba(255, 255, 255, 0.1) 3em 7em 0 -4.5em,
+      rgba(255, 255, 255, 0.1) 2em 13em 0 -4em,
+      rgba(255, 255, 255, 0.1) 6em 2em 0 -4.1em,
+      rgba(255, 255, 255, 0.1) 8em 8em 0 -4.5em,
+      rgba(255, 255, 255, 0.1) 6em 13em 0 -4.5em,
+      rgba(255, 255, 255, 0.1) -4em 7em 0 -4.5em,
+      rgba(255, 255, 255, 0.1) -1em 10em 0 -4.5em;
+  }
+  .sun {
+    top: 4.5em;
+    left: 18em;
+    transform: rotate(0deg);
+    width: 7em;
+    height: 7em;
+    background: #fff;
+    box-shadow: 3em 3em 0 5em #fff inset,
+      0 -5em 0 -2.7em #fff,
+      3.5em -3.5em 0 -3em #fff,
+      5em 0 0 -2.7em #fff,
+      3.5em 3.5em 0 -3em #fff,
+      0 5em 0 -2.7em #fff,
+      -3.5em 3.5em 0 -3em #fff,
+      -5em 0 0 -2.7em #fff,
+      -3.5em -3.5em 0 -3em #fff;
+  }
+  
+*{
+    margin : 0;
+    padding : 0;
+}
+
+
+
+/*Jumbotron*/
+
+.jumbotron{
+    
+    background-image: url(/Asset/IMG/bgjumbo.jpg);
+    background-size: cover;
+    height: 640px;
+    position: relative;
+}
+
+.jumbotron .container {
+    position:relative;
+    z-index: 1;
+}
+
+.jumbotron::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+
+}
+
+.jumbotron .display-4{
+    color:white;
+    font-style: bold;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+   
+}
+
+/* News */
+.col {
+    margin-top: 100px;
+    padding-bottom: 30px;
+    z-index: 1;
+    
+}
+
+.gb-konten {
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 50px;
+    height: 200px;
+    width: 500;
+}
+
+.row{
+     
+    padding-top: 10px;
+   
+}
+
+
+.news-link{
+    color: #000;
+    font-size: 25;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 100px;
+}
+
+.paragraf{
+    padding-top: 20px;
+}
+
+.btn-lain{
+    margin-top: 50px;
+}
+
+.col-sm-4{
+    
+}
+
+
+
+
+
+
+/* Dekstop Version */
+
+@media (min-width:992px){
+    
+
+/* navbar */
+
+#nav{
+    position : sticky;
+    top : 0;
+    z-index : 1001;
+}
+
+.navbar{
+    background-image: linear-gradient(to right,#5a5a5a,#2b2b2b);
+
+}
+
+.navbar-brand span{
+    font-weight: bolder;
+    margin: -10px;
+    color: #fff;
+    
+}
+
+.navbar-nav li{
+    padding : 0 10px;
+    margin-left: 10px;
+}
+
+.nav-link:hover::after{
+    border-bottom : 3px solid red;
+    content: '';
+    display: block;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px ;
+}
+
+.navbar-nav li a{
+    color : #fff !important;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.dropdown, .btn{
+
+    color:#ffff;
+    background-color: #383838;
+    border-radius: 10px;
+    margin-left: 10px;
+    text-align: center;
+
+   
+}
+
+.btn-srch{
+    width: 100px;
+    
+}
+
+/*jumbotron*/
+
+.title {
+    color: #ffff;
+    font-style: bold;
+}
+.jumbotron{
+    margin-top: -5px;
+    
+}
+
+.jumbotron .display-4{
+    
+    font-size: 60px;
+}
+
+/* Banner */
+#banner{
+    position: relative;
+    background-image: linear-gradient(to right, #2b2b2b, #5a5a5a);
+    color : #ffff;
+    padding-top: 5%;
+    padding-bottom: 20px;
+
+}
+
+.title-ent{
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-left: -120px;
+
+}
+
+.title-plc{
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-left: -40px;
+
+}
+
+.ban-img{
+    position: relative;
+    z-index: 1000;
+
+}
+
+/* Wave */
+.wave{
+    position: absolute;
+    bottom: -5%;
+    left: 0;
+    right: 3;
+}
+
+
+
+
+
+
+
+/* Feature */
+
+#grid{
+    padding: 20px;
+    
+}
+
+#fitur{
+    padding: 80px;
+
+
+
+}
+
+.fitur{
+    padding: 20px;
+
+}
+
+.fitur img{
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+}
+
+
+
+/* Contact */
+
+#contact {
+    padding: 100px 0px;
+
+
+}
+
+.contact{
+    margin-top: 5%;
+
+
+}
+
+.contact .btn{
+    border-radius: 20px;
+
+}
+
+
+
+
+/* Footer */
+
+#footer{
+    margin-top: 3%;
+    padding: 20px 0;
+    background-image: linear-gradient(to right,#5a5a5a,#2b2b2b);
+    color: #ffff;
+
+}
+
+
+}
